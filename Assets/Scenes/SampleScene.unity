@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Automatic
       objectReference: {fileID: 0}
+    - target: {fileID: 6097065174017836938, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ae6caf1db00a4e7419a52b85869051ab, type: 2}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -172,11 +176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.23491836
       objectReference: {fileID: 0}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.379857
       objectReference: {fileID: 0}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -284,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunBarrelEnd: {fileID: 1503434027}
-  bulletPrefab: {fileID: 487163690456666478, guid: 8eca411acead9e64e8f7c5fa7bc3db2c, type: 3}
+  bulletPrefab: {fileID: 487163690456666478, guid: cc24be54407bc7d4590647fc9aeb0e94, type: 3}
   anim: {fileID: 68114914}
   maxAmmo: 5
   timeBetweenShots: 1
