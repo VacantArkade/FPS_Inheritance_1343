@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339133314758330873}
   - component: {fileID: 2919814189503003676}
-  - component: {fileID: 3001342262438636590}
+  - component: {fileID: 3193276061158954350}
   m_Layer: 0
   m_Name: GunSide
   m_TagString: Untagged
@@ -75,7 +75,7 @@ Animator:
   m_GameObject: {fileID: 6182349884944273597}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 745f626a2abdc9e4aa1163ffe2fd3224, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -87,7 +87,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3001342262438636590
+--- !u!114 &3193276061158954350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,13 +96,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6182349884944273597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa60e089a3878fe48a36bb936d3ed3c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1b7ac52b70d014ab0341d773f07c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gunBarrelEnd: {fileID: 2314548405588656997}
   bulletPrefab: {fileID: 487163690456666478, guid: 8eca411acead9e64e8f7c5fa7bc3db2c, type: 3}
   anim: {fileID: 2919814189503003676}
-  maxAmmo: 10
+  maxAmmo: 100
   timeBetweenShots: 0.1
   isAutomatic: 0
 --- !u!1001 &1642328427347571192

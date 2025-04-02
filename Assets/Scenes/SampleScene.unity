@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gunerang
       objectReference: {fileID: 0}
+    - target: {fileID: 6097065174017836938, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ae6caf1db00a4e7419a52b85869051ab, type: 2}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6674,6 +6678,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1807940212}
     m_Modifications:
+    - target: {fileID: 2180214044729083986, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
+      propertyPath: maxAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415601762683553370, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.79
+      objectReference: {fileID: 0}
     - target: {fileID: 5793755575638682445, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
