@@ -178,6 +178,14 @@ public class FPSController : MonoBehaviour
         EquipGun(g);
     }
 
+    public void RemoveGun(Gun g)
+    {
+        currentGun.Unequip();
+        currentGun = null;
+        equippedGuns.Remove(g);
+        Destroy(g.gameObject);
+    }
+
     public void IncreaseAmmo(int amount)
     {
         currentGun.AddAmmo(amount);

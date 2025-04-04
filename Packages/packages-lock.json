@@ -10,7 +10,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.19",
+      "version": "1.8.18",
       "depth": 3,
       "source": "registry",
       "dependencies": {
@@ -70,7 +70,7 @@
         "com.unity.ide.rider": "3.0.31",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.2.3",
-        "com.unity.test-framework": "1.4.6",
+        "com.unity.test-framework": "1.4.5",
         "com.unity.testtools.codecoverage": "1.2.6"
       }
     },
@@ -141,7 +141,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "17.0.4",
+      "version": "17.0.3",
       "depth": 2,
       "source": "builtin",
       "dependencies": {
@@ -166,7 +166,7 @@
       }
     },
     "com.unity.searcher": {
-      "version": "4.9.3",
+      "version": "4.9.2",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
@@ -180,12 +180,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "17.0.4",
+      "version": "17.0.2",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "17.0.4",
-        "com.unity.searcher": "4.9.3"
+        "com.unity.render-pipelines.core": "17.0.3",
+        "com.unity.searcher": "4.9.2"
       }
     },
     "com.unity.test-framework": {

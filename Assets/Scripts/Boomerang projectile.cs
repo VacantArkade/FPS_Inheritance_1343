@@ -9,8 +9,8 @@ public class BoomerangProjectile : MonoBehaviour
     float speed;
     float knockback;
     float lifetime;
-    float halfLife;
     UnityAction<HitBoomData> OnHit;
+    GameObject playerPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -26,23 +26,15 @@ public class BoomerangProjectile : MonoBehaviour
 
     public void Initialize(float damage, float velocity, float life, float force, UnityAction<HitBoomData> onHit)
     {
+        playerPosition = FindFirstObjectByType<FPSController>().gameObject;
         damageAmount = damage;
         speed = velocity;
         lifetime = life;
         knockback = force;
         OnHit += onHit;
-        halfLife = lifetime / 2;
 
-        if (lifetime < halfLife)
-        {
-            GetComponent<Rigidbody>().linearVelocity = transform.forward * speed;
-        }
-        else
-        {
-            GetComponent<Rigidbody>().linearVelocity = transform.forward * speed;
-        }
+        GetComponent<Rigidbody>().linearVelocity = transform.forward * speed;
         Destroy(gameObject, lifetime);
-        
     }
 
     private void OnTriggerEnter(Collider other)
