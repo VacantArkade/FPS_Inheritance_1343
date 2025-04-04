@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4806127758399156636}
   - component: {fileID: 2483246323855330524}
   - component: {fileID: 4532034810564469576}
-  - component: {fileID: 8089564043016835769}
+  - component: {fileID: 3803527236907302567}
   m_Layer: 9
   m_Name: Bullet Boomerang
   m_TagString: Untagged
@@ -210,7 +210,7 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 0
---- !u!114 &8089564043016835769
+--- !u!114 &3803527236907302567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 487163690456666478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b88487630cf724389c40290f8e6065, type: 3}
+  m_Script: {fileID: 11500000, guid: 21c01f1e5834ff9498b85e1f5cb7671e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1282681860355926533
@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793755575638682445, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7901505
+      value: -0.335
       objectReference: {fileID: 0}
     - target: {fileID: 5793755575638682445, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -338,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793755575638682445, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0534014
+      value: 1.053
       objectReference: {fileID: 0}
     - target: {fileID: 5793755575638682445, guid: 4cea1f7999107494bb1bcc77dc412c8d, type: 3}
       propertyPath: m_LocalRotation.w

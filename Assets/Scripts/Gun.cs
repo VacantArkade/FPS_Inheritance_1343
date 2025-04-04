@@ -44,7 +44,10 @@ public class Gun : MonoBehaviour
         player = p;
     }
 
-    public virtual void Unequip() { }
+    public virtual void Unequip() 
+    { 
+        
+    }
 
     public bool AttemptAutomaticFire()
     {
