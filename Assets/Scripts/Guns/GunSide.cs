@@ -7,6 +7,9 @@ public class GunSide : Gun
 
     private void Update()
     {
+        if (bulletPrefab == null)
+            return;
+
         counter += Time.deltaTime;
         if (counter >= betweenTime)
         {

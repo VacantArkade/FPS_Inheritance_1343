@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class Boomerang : Gun
 {
+    [SerializeField] GameObject returnBoom;
     public override bool AttemptFire()
     {
         if (!base.AttemptFire())
             return false;
 
         var b = Instantiate(bulletPrefab, gunBarrelEnd.transform.position, gunBarrelEnd.rotation);
-        b.GetComponent<BoomerangProjectile>().Initialize(10, 5, 20, 5, null); // version without special effect
+        b.GetComponent<BoomerangProjectile>().Initialize(10, 5, 20, 5, DoThing); // version without special effect
         //b.GetComponent<Projectile>().Initialize(1, 100, 2, 5, DoThing); // version with special effect
 
         anim.SetTrigger("shoot");
@@ -19,8 +20,9 @@ public class Boomerang : Gun
     }
     void DoThing(HitBoomData data)
     {
+        Debug.Log("HI");
         Vector3 impactLocation = data.location;
-        //var p = Instantiate(boomPickup, data.location, Quaternion.identity);
+        var p = Instantiate(returnBoom, data.location, Quaternion.identity);
 
         /*var colliders = Physics.OverlapSphere(impactLocation, 5);
         foreach (var c in colliders)
