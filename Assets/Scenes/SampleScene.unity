@@ -4855,6 +4855,33 @@ MonoBehaviour:
   healthBar: {fileID: 578820795}
   currentAmmoText: {fileID: 213305280}
   maxAmmoText: {fileID: 135464750}
+--- !u!1 &1706929752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2907611458581148244, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
+  m_PrefabInstance: {fileID: 2907611457625568628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1706929759
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706929752}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1729142592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5848,6 +5875,70 @@ Transform:
   - {fileID: 526381399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1926871659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926871661}
+  - component: {fileID: 1926871660}
+  m_Layer: 0
+  m_Name: NavmeshSurface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1926871660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926871659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6d42e47027947d44d9a091e7c0f385b8, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1926871661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926871659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.194788, y: 5.3634424, z: 2.45758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1930768345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6322,8 +6413,8 @@ MonoBehaviour:
   gunHold: {fileID: 392724003}
   initialGun: {fileID: 0}
   movementSpeed: 5
-  lookSensitivityX: 250
-  lookSensitivityY: 150
+  lookSensitivityX: 100
+  lookSensitivityY: 50
   gravity: -20
   jumpForce: 5
 --- !u!114 &2071811437
@@ -6405,6 +6496,10 @@ PrefabInstance:
     - target: {fileID: 8589143665434785, guid: fa9c5921f7a67fe49822424e8604a768, type: 3}
       propertyPath: m_Name
       value: Gun Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589143665434785, guid: fa9c5921f7a67fe49822424e8604a768, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8589143665434785, guid: fa9c5921f7a67fe49822424e8604a768, type: 3}
       propertyPath: m_IsActive
@@ -6591,6 +6686,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jeff
       objectReference: {fileID: 0}
+    - target: {fileID: 2907611458581148244, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907611458581148245, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1706929759}
+    - target: {fileID: 2907611458581148245, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2071811435}
     - target: {fileID: 2907611458581148245, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
       propertyPath: damageNumberPrefab
       value: 
@@ -6598,7 +6705,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2907611458581148244, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1706929759}
   m_SourcePrefab: {fileID: 100100000, guid: 04893e3ecd62fd54bbd633891b596cac, type: 3}
 --- !u!1001 &3039201849166297035
 PrefabInstance:
@@ -6611,6 +6721,10 @@ PrefabInstance:
     - target: {fileID: 3642252180330663754, guid: 090a1e72bf09ea94cb48e7f992dcdca6, type: 3}
       propertyPath: m_Name
       value: Boomerang Pickup 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642252180330663754, guid: 090a1e72bf09ea94cb48e7f992dcdca6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642252180330663757, guid: 090a1e72bf09ea94cb48e7f992dcdca6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6665,9 +6779,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383095846}
     m_Modifications:
+    - target: {fileID: 6097065172514479719, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6097065174017836936, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_Name
       value: Basic Blaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097065174017836936, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6097065174017836939, guid: debb87d12cde8d940a851bbbe18732af, type: 3}
       propertyPath: m_RootOrder
@@ -6737,3 +6859,4 @@ SceneRoots:
   - {fileID: 2907611457625568628}
   - {fileID: 1729626531}
   - {fileID: 3039201849166297035}
+  - {fileID: 1926871661}
