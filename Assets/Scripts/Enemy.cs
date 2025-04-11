@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Transform target;
 
-    float recov = 0;
+    float recov;
 
     public Rigidbody Rigidbody { get; private set; }
     Vector3 origin;
@@ -18,17 +18,17 @@ public class Enemy : MonoBehaviour
     {
         Rigidbody = GetComponent<Rigidbody>();
         origin = transform.position;
+
+        recov = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(transform.position, target.position);
+        
 
-        Wander(distance);
-        Pursue(distance);
-
-        if (agent.isStopped == true)
+        if (agent.isStopped)
         {
             recov += Time.deltaTime;
             if (recov > 3)
@@ -36,6 +36,16 @@ public class Enemy : MonoBehaviour
                 agent.isStopped = false;
                 recov = 0;
             }
+        }
+
+        else if (distance > 7)
+        {
+            Wander();
+        }
+
+        else if (distance <= 7)
+        {
+            Pursue(distance);
         }
     }
 
@@ -51,18 +61,16 @@ public class Enemy : MonoBehaviour
 
     public void Attack()
     {
-        GetComponent<Rigidbody>().AddForce(Vector3.forward * 3, ForceMode.Impulse);
+        Vector3 directionToPlayer = (target.position - transform.position).normalized;
+        GetComponent<Rigidbody>().AddForce(directionToPlayer * 5, ForceMode.Impulse);
         Recovery();
         Debug.Log("Attack player");
     }
 
     public void Pursue(float distance)
     {
-        if(distance > 2 && distance <= 7)
-        {
-            agent.SetDestination(target.position);
-        }
-        else if (distance <= 2)
+        agent.SetDestination(target.position);
+        if (distance <= 2)
         {
             Attack();
         }
@@ -73,11 +81,8 @@ public class Enemy : MonoBehaviour
         agent.isStopped = true;
     }
 
-    public void Wander(float distance)
+    public void Wander()
     {
-        if (distance > 7)
-        {
-            agent.SetDestination(origin);
-        }
+        agent.SetDestination(origin);
     }
 }
